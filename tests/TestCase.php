@@ -8,7 +8,7 @@ use Filament\FilamentServiceProvider;
 use Filament\Support\SupportServiceProvider;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Kirschbaum\Commentions\CommentionsServiceProvider;
+use Christoferd\Commentions\CommentionsServiceProvider;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Tests\Models\User;
@@ -22,7 +22,7 @@ class TestCase extends Orchestra
         $this->setUpDatabase();
 
         config()->set('app.key', '7xE3Nz29bGRceBATftriyTuiYF7DcOjb');
-        config()->set('commentions.commenter.model', User::class);
+        config()->set('christoferd-commentions.commenter.model', User::class);
     }
 
     protected function getPackageProviders($app)

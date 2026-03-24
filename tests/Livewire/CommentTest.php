@@ -1,10 +1,10 @@
 <?php
 
-use Kirschbaum\Commentions\Comment;
-use Kirschbaum\Commentions\Comment as CommentModel;
-use Kirschbaum\Commentions\Config;
-use Kirschbaum\Commentions\Livewire\Comment as CommentComponent;
-use Kirschbaum\Commentions\RenderableComment;
+use Christoferd\Commentions\Comment;
+use Christoferd\Commentions\Comment as CommentModel;
+use Christoferd\Commentions\Config;
+use Christoferd\Commentions\Livewire\Comment as CommentComponent;
+use Christoferd\Commentions\RenderableComment;
 use Tests\Models\Post;
 use Tests\Models\User;
 use Tests\Policies\BlockedCommentPolicy;

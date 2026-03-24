@@ -1,11 +1,11 @@
 <?php
 
-namespace Kirschbaum\Commentions\Events;
+namespace Christoferd\Commentions\Events;
 
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
-use Kirschbaum\Commentions\Comment;
-use Kirschbaum\Commentions\CommentReaction;
+use Christoferd\Commentions\Comment;
+use Christoferd\Commentions\CommentReaction;
 
 class CommentWasReactedEvent
 {

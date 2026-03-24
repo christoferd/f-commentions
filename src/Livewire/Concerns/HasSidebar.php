@@ -1,11 +1,11 @@
 <?php
 
-namespace Kirschbaum\Commentions\Livewire\Concerns;
+namespace Christoferd\Commentions\Livewire\Concerns;
 
 use Filament\Notifications\Notification;
 use Illuminate\Support\Collection;
-use Kirschbaum\Commentions\Config;
-use Kirschbaum\Commentions\Contracts\Commenter;
+use Christoferd\Commentions\Config;
+use Christoferd\Commentions\Contracts\Commenter;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Renderless;
 
@@ -17,9 +17,9 @@ trait HasSidebar
 
     public function mountHasSidebar(?bool $enableSidebar = null, ?bool $showSubscribers = null): void
     {
-        $this->sidebarEnabled = $enableSidebar ?? (bool) config('commentions.subscriptions.show_sidebar');
+        $this->sidebarEnabled = $enableSidebar ?? (bool) config('christoferd-commentions.subscriptions.show_sidebar');
 
-        $this->showSubscribers = $showSubscribers ?? (bool) config('commentions.subscriptions.show_subscribers', true);
+        $this->showSubscribers = $showSubscribers ?? (bool) config('christoferd-commentions.subscriptions.show_subscribers', true);
     }
 
     #[Computed]
@@ -31,7 +31,7 @@ trait HasSidebar
     #[Computed]
     public function resolvedShowSubscribers(): bool
     {
-        return $this->showSubscribers ?? (bool) config('commentions.subscriptions.show_subscribers', true);
+        return $this->showSubscribers ?? (bool) config('christoferd-commentions.subscriptions.show_subscribers', true);
     }
 
     #[Computed]

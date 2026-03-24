@@ -1,9 +1,9 @@
 <?php
 
-namespace Kirschbaum\Commentions\Policies;
+namespace Christoferd\Commentions\Policies;
 
-use Kirschbaum\Commentions\Comment;
-use Kirschbaum\Commentions\Contracts\Commenter;
+use Christoferd\Commentions\Comment;
+use Christoferd\Commentions\Contracts\Commenter;
 
 class CommentPolicy
 {

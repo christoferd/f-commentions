@@ -1,4 +1,4 @@
-@use('\Kirschbaum\Commentions\Config')
+@use('\Christoferd\Commentions\Config')
 
 <div class="comm:flex comm:items-start comm:gap-x-4 comm:border comm:border-gray-300 comm:dark:border-gray-700 comm:p-4 comm:rounded-lg comm:shadow-sm comm:mb-2" id="filament-comment-{{ $comment->getId() }}">
     @if ($avatar = $comment->getAuthorAvatar())

@@ -1,9 +1,9 @@
 <?php
 
-namespace Kirschbaum\Commentions\Filament\Concerns;
+namespace Christoferd\Commentions\Filament\Concerns;
 
 use Closure;
-use Kirschbaum\Commentions\Config;
+use Christoferd\Commentions\Config;
 
 trait HasTipTapCssClasses
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Kirschbaum\Commentions\Contracts;
+namespace Christoferd\Commentions\Contracts;
 
 /**
  * @method bool can(string $ability, $arguments = [])

@@ -4,9 +4,9 @@ namespace Tests;
 
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Support\Facades\Event;
-use Kirschbaum\Commentions\Comment;
-use Kirschbaum\Commentions\Events\UserIsSubscribedToCommentableEvent;
-use Kirschbaum\Commentions\Events\UserWasMentionedEvent;
+use Christoferd\Commentions\Comment;
+use Christoferd\Commentions\Events\UserIsSubscribedToCommentableEvent;
+use Christoferd\Commentions\Events\UserWasMentionedEvent;
 use Tests\Models\Post;
 use Tests\Models\User;
 use Tests\Policies\BlockedCommentPolicy;
@@ -65,7 +65,7 @@ test('it dispatches events for mentions', function () {
 test('it dispatches events for subscribers (distinct event)', function () {
     Event::fake();
 
-    config()->set('commentions.subscriptions.dispatch_as_mention', false);
+    config()->set('christoferd-commentions.subscriptions.dispatch_as_mention', false);
 
     $author = User::factory()->create();
     $subscriber = User::factory()->create();
@@ -87,7 +87,7 @@ test('it dispatches events for subscribers (distinct event)', function () {
 test('it dispatches mention event for subscribers when configured', function () {
     Event::fake();
 
-    config()->set('commentions.subscriptions.dispatch_as_mention', true);
+    config()->set('christoferd-commentions.subscriptions.dispatch_as_mention', true);
 
     $author = User::factory()->create();
     $subscriber = User::factory()->create();

@@ -1,8 +1,8 @@
 <?php
 
-use Kirschbaum\Commentions\Comment as CommentModel;
-use Kirschbaum\Commentions\Livewire\CommentList;
-use Kirschbaum\Commentions\RenderableComment;
+use Christoferd\Commentions\Comment as CommentModel;
+use Christoferd\Commentions\Livewire\CommentList;
+use Christoferd\Commentions\RenderableComment;
 use Mockery;
 use Tests\Models\Post;
 use Tests\Models\User;

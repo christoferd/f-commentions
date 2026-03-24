@@ -1,10 +1,10 @@
 <?php
 
-namespace Kirschbaum\Commentions\Livewire\Concerns;
+namespace Christoferd\Commentions\Livewire\Concerns;
 
 use Illuminate\Support\Collection;
-use Kirschbaum\Commentions\Contracts\Commenter;
-use Kirschbaum\Commentions\Manager;
+use Christoferd\Commentions\Contracts\Commenter;
+use Christoferd\Commentions\Manager;
 use Livewire\Attributes\Computed;
 
 trait HasMentions

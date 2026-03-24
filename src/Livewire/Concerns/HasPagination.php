@@ -1,6 +1,6 @@
 <?php
 
-namespace Kirschbaum\Commentions\Livewire\Concerns;
+namespace Christoferd\Commentions\Livewire\Concerns;
 
 use Livewire\Attributes\Computed;
 

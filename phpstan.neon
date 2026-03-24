@@ -35,7 +35,7 @@ parameters:
             path: src/Actions/SaveComment.php
 
         -
-            message: '#^Cannot instantiate interface Kirschbaum\\Commentions\\Contracts\\RenderableComment\.$#'
+            message: '#^Cannot instantiate interface Christoferd\\Commentions\\Contracts\\RenderableComment\.$#'
             identifier: new.interface
             count: 1
             path: src/Livewire/RenderableCommentSynth.php

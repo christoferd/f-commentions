@@ -1,15 +1,15 @@
 <?php
 
-namespace Kirschbaum\Commentions\Actions;
+namespace Christoferd\Commentions\Actions;
 
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Database\Eloquent\Model;
-use Kirschbaum\Commentions\Comment;
-use Kirschbaum\Commentions\Config;
-use Kirschbaum\Commentions\Contracts\Commenter;
-use Kirschbaum\Commentions\Events\CommentWasCreatedEvent;
-use Kirschbaum\Commentions\Events\UserIsSubscribedToCommentableEvent;
-use Kirschbaum\Commentions\Events\UserWasMentionedEvent;
+use Christoferd\Commentions\Comment;
+use Christoferd\Commentions\Config;
+use Christoferd\Commentions\Contracts\Commenter;
+use Christoferd\Commentions\Events\CommentWasCreatedEvent;
+use Christoferd\Commentions\Events\UserIsSubscribedToCommentableEvent;
+use Christoferd\Commentions\Events\UserWasMentionedEvent;
 
 class SaveComment
 {
@@ -45,7 +45,7 @@ class SaveComment
             UserWasMentionedEvent::dispatch($comment, $mentionee);
         });
 
-        if (config('commentions.subscriptions.auto_subscribe_on_mention', true)
+        if (config('christoferd-commentions.subscriptions.auto_subscribe_on_mention', true)
             && method_exists($comment->commentable, 'subscribe')
         ) {
             $mentionees->each(function (Commenter $mentionee) use ($comment) {
@@ -66,7 +66,7 @@ class SaveComment
             $subscribers
                 ->filter(fn ($subscriber) => ! in_array($subscriber->getKey(), $excludeIds, true))
                 ->each(function (Commenter $subscriber) use ($comment) {
-                    if (config('commentions.subscriptions.dispatch_as_mention', false)) {
+                    if (config('christoferd-commentions.subscriptions.dispatch_as_mention', false)) {
                         UserWasMentionedEvent::dispatch($comment, $subscriber);
                     } else {
                         UserIsSubscribedToCommentableEvent::dispatch($comment, $subscriber);
@@ -74,7 +74,7 @@ class SaveComment
                 });
         }
 
-        if (config('commentions.subscriptions.auto_subscribe_on_comment', true)
+        if (config('christoferd-commentions.subscriptions.auto_subscribe_on_comment', true)
             && method_exists($comment->commentable, 'subscribe')
         ) {
             // Only subscribe if not already subscribed

@@ -1,6 +1,6 @@
 <?php
 
-namespace Kirschbaum\Commentions;
+namespace Christoferd\Commentions;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;

@@ -1,12 +1,12 @@
 <?php
 
-namespace Kirschbaum\Commentions\Events;
+namespace Christoferd\Commentions\Events;
 
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
-use Kirschbaum\Commentions\Comment;
-use Kirschbaum\Commentions\Contracts\Commenter;
+use Christoferd\Commentions\Comment;
+use Christoferd\Commentions\Contracts\Commenter;
 
 class UserWasMentionedEvent
 {

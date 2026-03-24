@@ -1,8 +1,8 @@
 <?php
 
-namespace Kirschbaum\Commentions\Livewire;
+namespace Christoferd\Commentions\Livewire;
 
-use Kirschbaum\Commentions\Contracts\RenderableComment;
+use Christoferd\Commentions\Contracts\RenderableComment;
 use Livewire\Mechanisms\HandleComponents\Synthesizers\Synth;
 
 class RenderableCommentSynth extends Synth

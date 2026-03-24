@@ -1,11 +1,11 @@
 <?php
 
-namespace Kirschbaum\Commentions;
+namespace Christoferd\Commentions;
 
 use Closure;
 use Composer\InstalledVersions;
 use InvalidArgumentException;
-use Kirschbaum\Commentions\Contracts\Commenter;
+use Christoferd\Commentions\Contracts\Commenter;
 
 class Config
 {
@@ -36,17 +36,17 @@ class Config
 
     public static function getCommentTable(): string
     {
-        return config('commentions.tables.comments', 'comments');
+        return config('christoferd-commentions.tables.comments', 'comments');
     }
 
     public static function getCommentReactionTable(): string
     {
-        return config('commentions.tables.comment_reactions', 'comment_reactions');
+        return config('christoferd-commentions.tables.comment_reactions', 'comment_reactions');
     }
 
     public static function getCommentSubscriptionTable(): string
     {
-        return config('commentions.tables.comment_subscriptions', 'comment_subscriptions');
+        return config('christoferd-commentions.tables.comment_subscriptions', 'comment_subscriptions');
     }
 
     public static function resolveCommentUrlUsing(Closure $callback): void
@@ -69,17 +69,17 @@ class Config
 
     public static function getCommentModel(): string
     {
-        return config('commentions.comment.model', Comment::class);
+        return config('christoferd-commentions.comment.model', Comment::class);
     }
 
     public static function getCommenterModel(): string
     {
-        return config('commentions.commenter.model');
+        return config('christoferd-commentions.commenter.model');
     }
 
     public static function getAllowedReactions(): array
     {
-        return config('commentions.reactions.allowed', ['👍']);
+        return config('christoferd-commentions.reactions.allowed', ['👍']);
     }
 
     public static function resolveTipTapCssClassesUsing(Closure $callback): void

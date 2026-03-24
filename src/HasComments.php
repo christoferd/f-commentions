@@ -1,11 +1,11 @@
 <?php
 
-namespace Kirschbaum\Commentions;
+namespace Christoferd\Commentions;
 
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Collection;
-use Kirschbaum\Commentions\Actions\SaveComment;
-use Kirschbaum\Commentions\Contracts\Commenter;
+use Christoferd\Commentions\Actions\SaveComment;
+use Christoferd\Commentions\Contracts\Commenter;
 
 trait HasComments
 {

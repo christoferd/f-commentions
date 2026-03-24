@@ -1,11 +1,11 @@
 <?php
 
-namespace Kirschbaum\Commentions\Database\Factories;
+namespace Christoferd\Commentions\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Kirschbaum\Commentions\Comment;
-use Kirschbaum\Commentions\Contracts\Commentable;
-use Kirschbaum\Commentions\Contracts\Commenter;
+use Christoferd\Commentions\Comment;
+use Christoferd\Commentions\Contracts\Commentable;
+use Christoferd\Commentions\Contracts\Commenter;
 
 /**
  * @extends Factory<\App\Models\Comment>

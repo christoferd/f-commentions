@@ -1,12 +1,12 @@
 {
-    "name": "kirschbaum-development/commentions",
+    "name": "christoferd/f-commentions",
     "description": "A package to allow you to create comments, tag users and more",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Kirschbaum\\Commentions\\": "src/",
-            "Kirschbaum\\Commentions\\Database\\Factories\\": "database/factories/"
+            "Christoferd\\Commentions\\": "src/",
+            "Christoferd\\Commentions\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
@@ -33,7 +33,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Kirschbaum\\Commentions\\CommentionsServiceProvider"
+                "Christoferd\\Commentions\\CommentionsServiceProvider"
             ]
         }
     },

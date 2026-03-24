@@ -1,6 +1,6 @@
 <?php
 
-namespace Kirschbaum\Commentions\Actions;
+namespace Christoferd\Commentions\Actions;
 
 use Closure;
 use League\HTMLToMarkdown\HtmlConverter;

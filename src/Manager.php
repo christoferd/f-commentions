@@ -1,9 +1,9 @@
 <?php
 
-namespace Kirschbaum\Commentions;
+namespace Christoferd\Commentions;
 
 use Filament\Models\Contracts\HasName;
-use Kirschbaum\Commentions\Contracts\Commenter;
+use Christoferd\Commentions\Contracts\Commenter;
 
 class Manager
 {

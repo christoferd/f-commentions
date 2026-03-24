@@ -1,11 +1,11 @@
 <?php
 
-namespace Kirschbaum\Commentions\Livewire;
+namespace Christoferd\Commentions\Livewire;
 
 use Illuminate\Contracts\View\View;
-use Kirschbaum\Commentions\Comment as CommentModel;
-use Kirschbaum\Commentions\Config;
-use Kirschbaum\Commentions\Contracts\RenderableComment;
+use Christoferd\Commentions\Comment as CommentModel;
+use Christoferd\Commentions\Config;
+use Christoferd\Commentions\Contracts\RenderableComment;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\On;
 use Livewire\Component;

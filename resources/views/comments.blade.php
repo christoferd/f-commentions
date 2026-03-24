@@ -1,4 +1,4 @@
-@use('\Kirschbaum\Commentions\Config')
+@use('\Christoferd\Commentions\Config')
 
 <div class="comm:flex comm:gap-4 comm:h-full" x-data="{ wasFocused: false }">
     {{-- Main Comments Area --}}

@@ -1,10 +1,10 @@
 <?php
 
-namespace Kirschbaum\Commentions\Filament\Actions;
+namespace Christoferd\Commentions\Filament\Actions;
 
 use Filament\Actions\Action;
 use Illuminate\Database\Eloquent\Model;
-use Kirschbaum\Commentions\Filament\Concerns\HasSidebar;
+use Christoferd\Commentions\Filament\Concerns\HasSidebar;
 
 class SubscriptionAction extends Action
 {

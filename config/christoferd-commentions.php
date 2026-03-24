@@ -1,10 +1,10 @@
 <?php
 
 use App\Models\User;
-use Kirschbaum\Commentions\Comment;
-use Kirschbaum\Commentions\Listeners\SendUserMentionedNotification;
-use Kirschbaum\Commentions\Notifications\UserMentionedInComment;
-use Kirschbaum\Commentions\Policies\CommentPolicy;
+use Christoferd\Commentions\Comment;
+use Christoferd\Commentions\Listeners\SendUserMentionedNotification;
+use Christoferd\Commentions\Notifications\UserMentionedInComment;
+use Christoferd\Commentions\Policies\CommentPolicy;
 
 return [
     /*

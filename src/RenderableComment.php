@@ -1,11 +1,11 @@
 <?php
 
-namespace Kirschbaum\Commentions;
+namespace Christoferd\Commentions;
 
 use Carbon\Carbon;
 use Carbon\CarbonInterface;
 use DateTime;
-use Kirschbaum\Commentions\Contracts\RenderableComment as RenderableCommentContract;
+use Christoferd\Commentions\Contracts\RenderableComment as RenderableCommentContract;
 use Livewire\Wireable;
 
 class RenderableComment implements RenderableCommentContract, Wireable

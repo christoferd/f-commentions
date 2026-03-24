@@ -1,9 +1,9 @@
 <?php
 
-namespace Kirschbaum\Commentions\Livewire;
+namespace Christoferd\Commentions\Livewire;
 
 use Illuminate\Database\Eloquent\Model;
-use Kirschbaum\Commentions\Livewire\Concerns\HasSidebar;
+use Christoferd\Commentions\Livewire\Concerns\HasSidebar;
 use Livewire\Attributes\On;
 use Livewire\Component;
 

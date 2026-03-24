@@ -1,14 +1,14 @@
 <?php
 
-namespace Kirschbaum\Commentions\Livewire;
+namespace Christoferd\Commentions\Livewire;
 
 use Illuminate\Database\Eloquent\Model;
-use Kirschbaum\Commentions\Actions\SaveComment;
-use Kirschbaum\Commentions\Config;
-use Kirschbaum\Commentions\Livewire\Concerns\HasMentions;
-use Kirschbaum\Commentions\Livewire\Concerns\HasPagination;
-use Kirschbaum\Commentions\Livewire\Concerns\HasPolling;
-use Kirschbaum\Commentions\Livewire\Concerns\HasSidebar;
+use Christoferd\Commentions\Actions\SaveComment;
+use Christoferd\Commentions\Config;
+use Christoferd\Commentions\Livewire\Concerns\HasMentions;
+use Christoferd\Commentions\Livewire\Concerns\HasPagination;
+use Christoferd\Commentions\Livewire\Concerns\HasPolling;
+use Christoferd\Commentions\Livewire\Concerns\HasSidebar;
 use Livewire\Attributes\On;
 use Livewire\Attributes\Renderless;
 use Livewire\Component;

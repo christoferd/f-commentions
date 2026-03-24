@@ -1,13 +1,13 @@
 <?php
 
-namespace Kirschbaum\Commentions\Filament\Infolists\Components;
+namespace Christoferd\Commentions\Filament\Infolists\Components;
 
 use Filament\Infolists\Components\Entry;
-use Kirschbaum\Commentions\Filament\Concerns\HasMentionables;
-use Kirschbaum\Commentions\Filament\Concerns\HasPagination;
-use Kirschbaum\Commentions\Filament\Concerns\HasPolling;
-use Kirschbaum\Commentions\Filament\Concerns\HasSidebar;
-use Kirschbaum\Commentions\Filament\Concerns\HasTipTapCssClasses;
+use Christoferd\Commentions\Filament\Concerns\HasMentionables;
+use Christoferd\Commentions\Filament\Concerns\HasPagination;
+use Christoferd\Commentions\Filament\Concerns\HasPolling;
+use Christoferd\Commentions\Filament\Concerns\HasSidebar;
+use Christoferd\Commentions\Filament\Concerns\HasTipTapCssClasses;
 
 class CommentsEntry extends Entry
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Kirschbaum\Commentions\Filament\Concerns;
+namespace Christoferd\Commentions\Filament\Concerns;
 
 use Closure;
 use Illuminate\Database\Eloquent\Model;
-use Kirschbaum\Commentions\Config;
-use Kirschbaum\Commentions\Contracts\Commenter;
+use Christoferd\Commentions\Config;
+use Christoferd\Commentions\Contracts\Commenter;
 
 trait HasSidebar
 {

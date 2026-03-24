@@ -2,12 +2,12 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Event;
-use Kirschbaum\Commentions\Comment as CommentModel;
-use Kirschbaum\Commentions\Config;
-use Kirschbaum\Commentions\Database\Factories\CommentFactory;
-use Kirschbaum\Commentions\Events\CommentWasReactedEvent;
-use Kirschbaum\Commentions\Livewire\Comment as CommentComponent;
-use Kirschbaum\Commentions\Livewire\Reactions;
+use Christoferd\Commentions\Comment as CommentModel;
+use Christoferd\Commentions\Config;
+use Christoferd\Commentions\Database\Factories\CommentFactory;
+use Christoferd\Commentions\Events\CommentWasReactedEvent;
+use Christoferd\Commentions\Livewire\Comment as CommentComponent;
+use Christoferd\Commentions\Livewire\Reactions;
 use Tests\Database\Factories\PostFactory;
 use Tests\Models\Post;
 use Tests\Models\User;
@@ -16,7 +16,7 @@ use function Pest\Laravel\actingAs;
 use function Pest\Livewire\livewire;
 
 beforeEach(function () {
-    config(['commentions.reactions.allowed' => ['👍', '❤️', '😂', '😮', '😢', '🤔']]);
+    config(['christoferd-commentions.reactions.allowed' => ['👍', '❤️', '😂', '😮', '😢', '🤔']]);
     Config::resolveAuthenticatedUserUsing(fn () => Auth::user());
     Event::fake();
 });

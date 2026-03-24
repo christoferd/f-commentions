@@ -6,7 +6,7 @@
     </include>
   </coverage>
   <testsuites>
-    <testsuite name="Kirschbaum Test Suite">
+    <testsuite name="Christoferd Test Suite">
       <directory>tests</directory>
     </testsuite>
   </testsuites>

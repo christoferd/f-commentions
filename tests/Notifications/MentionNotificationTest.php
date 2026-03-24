@@ -2,17 +2,17 @@
 
 use Illuminate\Notifications\Notification as BaseNotification;
 use Illuminate\Support\Facades\Notification as NotificationFacade;
-use Kirschbaum\Commentions\Comment;
-use Kirschbaum\Commentions\Config;
-use Kirschbaum\Commentions\Events\UserWasMentionedEvent;
-use Kirschbaum\Commentions\Listeners\SendUserMentionedNotification;
-use Kirschbaum\Commentions\Notifications\UserMentionedInComment;
+use Christoferd\Commentions\Comment;
+use Christoferd\Commentions\Config;
+use Christoferd\Commentions\Events\UserWasMentionedEvent;
+use Christoferd\Commentions\Listeners\SendUserMentionedNotification;
+use Christoferd\Commentions\Notifications\UserMentionedInComment;
 use Tests\Models\Post;
 use Tests\Models\User;
 
 test('it sends a mention notification when enabled with configured channels', function () {
-    config()->set('commentions.notifications.mentions.enabled', true);
-    config()->set('commentions.notifications.mentions.channels', ['mail', 'database']);
+    config()->set('christoferd-commentions.notifications.mentions.enabled', true);
+    config()->set('christoferd-commentions.notifications.mentions.channels', ['mail', 'database']);
 
     /** @var User $author */
     $author = User::factory()->create();
@@ -65,9 +65,9 @@ class TestCustomMentionNotification extends BaseNotification
 }
 
 test('it allows overriding the notification class via config', function () {
-    config()->set('commentions.notifications.mentions.enabled', true);
-    config()->set('commentions.notifications.mentions.channels', ['mail']);
-    config()->set('commentions.notifications.mentions.notification', TestCustomMentionNotification::class);
+    config()->set('christoferd-commentions.notifications.mentions.enabled', true);
+    config()->set('christoferd-commentions.notifications.mentions.channels', ['mail']);
+    config()->set('christoferd-commentions.notifications.mentions.notification', TestCustomMentionNotification::class);
 
     /** @var User $author */
     $author = User::factory()->create();
@@ -97,8 +97,8 @@ test('it allows overriding the notification class via config', function () {
 });
 
 test('it does not send a mention notification when disabled', function () {
-    config()->set('commentions.notifications.mentions.enabled', false);
-    config()->set('commentions.notifications.mentions.channels', ['mail']);
+    config()->set('christoferd-commentions.notifications.mentions.enabled', false);
+    config()->set('christoferd-commentions.notifications.mentions.channels', ['mail']);
 
     /** @var User $author */
     $author = User::factory()->create();
@@ -118,8 +118,8 @@ test('it does not send a mention notification when disabled', function () {
 });
 
 test('it does not send a mention notification when channels are empty', function () {
-    config()->set('commentions.notifications.mentions.enabled', true);
-    config()->set('commentions.notifications.mentions.channels', []);
+    config()->set('christoferd-commentions.notifications.mentions.enabled', true);
+    config()->set('christoferd-commentions.notifications.mentions.channels', []);
 
     /** @var User $author */
     $author = User::factory()->create();
@@ -139,8 +139,8 @@ test('it does not send a mention notification when channels are empty', function
 });
 
 test('it uses the configured comment URL resolver in notification payload', function () {
-    config()->set('commentions.notifications.mentions.enabled', true);
-    config()->set('commentions.notifications.mentions.channels', ['database']);
+    config()->set('christoferd-commentions.notifications.mentions.enabled', true);
+    config()->set('christoferd-commentions.notifications.mentions.channels', ['database']);
 
     $resolvedUrl = 'https://example.test/some-resource#comment-123';
     Config::resolveCommentUrlUsing(function (Comment $comment) use ($resolvedUrl) {

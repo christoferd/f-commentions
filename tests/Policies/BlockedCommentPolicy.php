@@ -2,9 +2,9 @@
 
 namespace Tests\Policies;
 
-use Kirschbaum\Commentions\Comment;
-use Kirschbaum\Commentions\Contracts\Commenter;
-use Kirschbaum\Commentions\Policies\CommentPolicy;
+use Christoferd\Commentions\Comment;
+use Christoferd\Commentions\Contracts\Commenter;
+use Christoferd\Commentions\Policies\CommentPolicy;
 
 class BlockedCommentPolicy extends CommentPolicy
 {

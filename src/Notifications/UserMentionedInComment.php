@@ -1,15 +1,15 @@
 <?php
 
-namespace Kirschbaum\Commentions\Notifications;
+namespace Christoferd\Commentions\Notifications;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\BroadcastMessage;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
-use Kirschbaum\Commentions\Comment;
-use Kirschbaum\Commentions\Config;
-use Kirschbaum\Commentions\Manager;
+use Christoferd\Commentions\Comment;
+use Christoferd\Commentions\Config;
+use Christoferd\Commentions\Manager;
 
 class UserMentionedInComment extends Notification implements ShouldQueue
 {
@@ -30,7 +30,7 @@ class UserMentionedInComment extends Notification implements ShouldQueue
         $url = Config::resolveCommentUrl($this->comment) ?? url('/');
 
         return (new MailMessage())
-            ->subject((string) config('commentions.notifications.mentions.mail.subject', 'You were mentioned in a comment'))
+            ->subject((string) config('christoferd-commentions.notifications.mentions.mail.subject', 'You were mentioned in a comment'))
             ->greeting('Hi ' . Manager::getName($notifiable))
             ->line('You were mentioned in a comment by ' . $this->comment->getAuthorName() . '.')
             ->line(strip_tags($this->comment->getBodyMarkdown()))

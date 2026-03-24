@@ -1,11 +1,11 @@
 <?php
 
-namespace Kirschbaum\Commentions;
+namespace Christoferd\Commentions;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
-use Kirschbaum\Commentions\Contracts\Commenter;
+use Christoferd\Commentions\Contracts\Commenter;
 
 /**
  * @property-read Comment $comment

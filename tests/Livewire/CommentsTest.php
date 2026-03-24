@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Event;
-use Kirschbaum\Commentions\Config;
-use Kirschbaum\Commentions\Events\CommentWasCreatedEvent;
-use Kirschbaum\Commentions\Livewire\Comments;
+use Christoferd\Commentions\Config;
+use Christoferd\Commentions\Events\CommentWasCreatedEvent;
+use Christoferd\Commentions\Livewire\Comments;
 use Tests\Models\Post;
 use Tests\Models\User;
 

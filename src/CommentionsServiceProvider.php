@@ -1,6 +1,6 @@
 <?php
 
-namespace Kirschbaum\Commentions;
+namespace Christoferd\Commentions;
 
 use Filament\Support\Assets\Css;
 use Filament\Support\Assets\Js;
@@ -8,14 +8,14 @@ use Filament\Support\Facades\FilamentAsset;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\View;
-use Kirschbaum\Commentions\Comment as CommentModel;
-use Kirschbaum\Commentions\Events\UserWasMentionedEvent;
-use Kirschbaum\Commentions\Listeners\SendUserMentionedNotification;
-use Kirschbaum\Commentions\Livewire\Comment;
-use Kirschbaum\Commentions\Livewire\CommentList;
-use Kirschbaum\Commentions\Livewire\Comments;
-use Kirschbaum\Commentions\Livewire\Reactions;
-use Kirschbaum\Commentions\Livewire\SubscriptionSidebar;
+use Christoferd\Commentions\Comment as CommentModel;
+use Christoferd\Commentions\Events\UserWasMentionedEvent;
+use Christoferd\Commentions\Listeners\SendUserMentionedNotification;
+use Christoferd\Commentions\Livewire\Comment;
+use Christoferd\Commentions\Livewire\CommentList;
+use Christoferd\Commentions\Livewire\Comments;
+use Christoferd\Commentions\Livewire\Reactions;
+use Christoferd\Commentions\Livewire\SubscriptionSidebar;
 use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -33,7 +33,7 @@ class CommentionsServiceProvider extends PackageServiceProvider
          */
         $package
             ->name(static::$name)
-            ->hasConfigFile()
+            ->hasConfigFile('christoferd-commentions')
             ->hasTranslations()
             ->hasViews()
             ->hasMigrations([
@@ -60,25 +60,25 @@ class CommentionsServiceProvider extends PackageServiceProvider
             [
                 Js::make('commentions-scripts', __DIR__ . '/../resources/dist/commentions.js')->module(),
             ],
-            'kirschbaum-development/' . static::$name
+            'christoferd/' . static::$name
         );
 
         FilamentAsset::register(
             [
                 Css::make('commentions', __DIR__ . '/../resources/dist/commentions.css'),
             ],
-            'kirschbaum-development/' . static::$name
+            'christoferd/' . static::$name
         );
 
-        Gate::policy(CommentModel::class, config('commentions.comment.policy'));
+        Gate::policy(CommentModel::class, config('christoferd-commentions.comment.policy'));
 
         // Allow publishing of translation files with a custom tag
         $this->publishes([
             __DIR__ . '/../resources/lang' => resource_path('lang/vendor/commentions'),
         ], 'commentions-lang');
 
-        if (config('commentions.notifications.mentions.enabled', false)) {
-            $listenerClass = (string) config('commentions.notifications.mentions.listener', SendUserMentionedNotification::class);
+        if (config('christoferd-commentions.notifications.mentions.enabled', false)) {
+            $listenerClass = (string) config('christoferd-commentions.notifications.mentions.listener', SendUserMentionedNotification::class);
             Event::listen(UserWasMentionedEvent::class, $listenerClass);
         }
     }

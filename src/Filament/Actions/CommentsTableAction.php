@@ -1,13 +1,13 @@
 <?php
 
-namespace Kirschbaum\Commentions\Filament\Actions;
+namespace Christoferd\Commentions\Filament\Actions;
 
 use Filament\Tables\Actions\Action;
 use Illuminate\Database\Eloquent\Model;
-use Kirschbaum\Commentions\Filament\Concerns\HasMentionables;
-use Kirschbaum\Commentions\Filament\Concerns\HasPolling;
-use Kirschbaum\Commentions\Filament\Concerns\HasSidebar;
-use Kirschbaum\Commentions\Filament\Concerns\HasTipTapCssClasses;
+use Christoferd\Commentions\Filament\Concerns\HasMentionables;
+use Christoferd\Commentions\Filament\Concerns\HasPolling;
+use Christoferd\Commentions\Filament\Concerns\HasSidebar;
+use Christoferd\Commentions\Filament\Concerns\HasTipTapCssClasses;
 
 class CommentsTableAction extends Action
 {

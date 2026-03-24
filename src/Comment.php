@@ -1,6 +1,6 @@
 <?php
 
-namespace Kirschbaum\Commentions;
+namespace Christoferd\Commentions;
 
 use Carbon\Carbon;
 use Carbon\CarbonInterface;
@@ -13,13 +13,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Support\Collection;
-use Kirschbaum\Commentions\Actions\HtmlToMarkdown;
-use Kirschbaum\Commentions\Actions\ParseComment;
-use Kirschbaum\Commentions\Actions\ToggleCommentReaction;
-use Kirschbaum\Commentions\Contracts\Commentable;
-use Kirschbaum\Commentions\Contracts\Commenter;
-use Kirschbaum\Commentions\Contracts\RenderableComment;
-use Kirschbaum\Commentions\Database\Factories\CommentFactory;
+use Christoferd\Commentions\Actions\HtmlToMarkdown;
+use Christoferd\Commentions\Actions\ParseComment;
+use Christoferd\Commentions\Actions\ToggleCommentReaction;
+use Christoferd\Commentions\Contracts\Commentable;
+use Christoferd\Commentions\Contracts\Commenter;
+use Christoferd\Commentions\Contracts\RenderableComment;
+use Christoferd\Commentions\Database\Factories\CommentFactory;
 
 /**
  * @property int $id

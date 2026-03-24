@@ -3,9 +3,9 @@
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Event;
-use Kirschbaum\Commentions\CommentSubscription;
-use Kirschbaum\Commentions\Config;
-use Kirschbaum\Commentions\Livewire\Comments;
+use Christoferd\Commentions\CommentSubscription;
+use Christoferd\Commentions\Config;
+use Christoferd\Commentions\Livewire\Comments;
 use Tests\Models\Post;
 use Tests\Models\User;
 
@@ -103,7 +103,7 @@ test('toggleSubscription subscribes and unsubscribes the current user', function
 });
 
 test('showSubscribers defaults to config when not provided', function () {
-    config(['commentions.subscriptions.show_subscribers' => false]);
+    config(['christoferd-commentions.subscriptions.show_subscribers' => false]);
 
     /** @var User $user */
     $user = User::factory()->create();

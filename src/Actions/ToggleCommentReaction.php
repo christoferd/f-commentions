@@ -1,12 +1,12 @@
 <?php
 
-namespace Kirschbaum\Commentions\Actions;
+namespace Christoferd\Commentions\Actions;
 
-use Kirschbaum\Commentions\Comment;
-use Kirschbaum\Commentions\CommentReaction;
-use Kirschbaum\Commentions\Config;
-use Kirschbaum\Commentions\Contracts\Commenter;
-use Kirschbaum\Commentions\Events\CommentWasReactedEvent;
+use Christoferd\Commentions\Comment;
+use Christoferd\Commentions\CommentReaction;
+use Christoferd\Commentions\Config;
+use Christoferd\Commentions\Contracts\Commenter;
+use Christoferd\Commentions\Events\CommentWasReactedEvent;
 
 class ToggleCommentReaction
 {

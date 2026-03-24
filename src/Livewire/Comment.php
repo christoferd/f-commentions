@@ -1,13 +1,13 @@
 <?php
 
-namespace Kirschbaum\Commentions\Livewire;
+namespace Christoferd\Commentions\Livewire;
 
 use Filament\Notifications\Notification;
 use Illuminate\Contracts\View\View;
-use Kirschbaum\Commentions\Comment as CommentModel;
-use Kirschbaum\Commentions\Config;
-use Kirschbaum\Commentions\Contracts\RenderableComment;
-use Kirschbaum\Commentions\Livewire\Concerns\HasMentions;
+use Christoferd\Commentions\Comment as CommentModel;
+use Christoferd\Commentions\Config;
+use Christoferd\Commentions\Contracts\RenderableComment;
+use Christoferd\Commentions\Livewire\Concerns\HasMentions;
 use Livewire\Attributes\On;
 use Livewire\Attributes\Renderless;
 use Livewire\Component;

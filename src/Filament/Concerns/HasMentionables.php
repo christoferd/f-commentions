@@ -1,6 +1,6 @@
 <?php
 
-namespace Kirschbaum\Commentions\Filament\Concerns;
+namespace Christoferd\Commentions\Filament\Concerns;
 
 use Closure;
 use Illuminate\Support\Collection;

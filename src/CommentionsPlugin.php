@@ -1,6 +1,6 @@
 <?php
 
-namespace Kirschbaum\Commentions;
+namespace Christoferd\Commentions;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
